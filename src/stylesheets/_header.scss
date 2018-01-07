@@ -1,46 +1,8 @@
-header {
+.radar-header {
   width: 100%;
   line-height: 60px;
   text-align: center;
   margin-bottom: 15px;
-
-  .radar-title {
-    background-color: $grey-light;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: table;
-    margin: auto;
-    width: 100%;
-
-    .radar-title__text {
-      display: table-cell;
-      width: 70%;
-      text-align: left;
-      padding-left: 100px;
-      h1 {
-        font-size: 55px;
-        font-weight: 900;
-        letter-spacing: -.04em;
-        line-height: 0.8em;
-        margin: 0;
-        text-transform: uppercase;
-      }
-    }
-
-    .radar-title__logo {
-      width: 30%;
-      display: table-cell;
-      vertical-align: middle;
-      a {
-        border-bottom: none;
-      }
-      img {
-        vertical-align: middle;
-        width: 35%;
-      }
-
-    }
-  }
 
   .print-radar {
     margin-left: 100px;
@@ -51,7 +13,6 @@ header {
     cursor: pointer;
     display: inline-block;
     font-size: $baseFont;
-    padding-bottom: 15px;
     text-align: left;
     width: 80%;
   }

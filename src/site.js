@@ -1,7 +1,8 @@
 require('./common');
-require('./images/logo.png');
 require('./images/radar_legend.png');
 
 const GoogleSheetInput = require('./util/factory');
 
-GoogleSheetInput().build();
+document.querySelectorAll('[data-radar]')
+        .forEach(function(elm) { GoogleSheetInput(elm).build(); });
+        // .forEach(elm => GoogleSheetInput(elm).build());

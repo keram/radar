@@ -1,17 +1,12 @@
 @import 'colors';
 @import 'fonts';
 @import 'tip';
-@import 'form';
 @import 'error';
 @import 'header';
 @import 'footer';
 
-@import url(https://www.thoughtworks.com/css/screen.css);
-
 body {
-  font: 18px 'Open Sans';
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
+
 }
 
 @media print {
@@ -32,7 +27,7 @@ body {
     font-weight: normal;
   }
 
-  #radar-plot {
+  .radar-plot {
     display: none;
   }
 
@@ -95,31 +90,8 @@ body {
     padding: 0 15px;
   }
 
-  header {
+  .radar-header {
     text-align: left;
-
-    .radar-title .radar-title__text {
-      font-size: 40px;
-      width: 100%;
-      padding: 10px;
-      display:block;
-    }
-
-    .radar-title .radar-title__logo {
-      display: block;
-      width: auto;
-
-      a {
-        padding: 40px 10px 0;
-        display: block;
-        &::after {
-          display: none;
-        }
-      }
-      img {
-        max-width: 150px;
-      }
-    }
 
     .button {
       display: none;
@@ -138,25 +110,51 @@ body {
     }
   }
 
-  #footer {
-    display: none;
-  }
-
   .error-container {
     display: none;
   }
 
 }
 
-
 @media screen {
+  .radar-holder {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
 
-  #radar {
+  .input-sheet__banner {
+    background-repeat: no-repeat;
+    background-color: $grey-light;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 285px;
+    display: table;
+
+    div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    p, h1 {
+      color: $white;
+    }
+
+    a {
+      color: $white;
+      border-bottom-color: $white;
+    }
+  }
+
+  .radar-holder {
     width: 80%;
     margin: 0 auto;
     position: relative;
 
-    svg#radar-plot {
+    svg.radar-plot {
       margin: 0 auto;
       transition: all 1s ease;
       position: absolute;
