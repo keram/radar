@@ -22,6 +22,7 @@ const Radar = function (size, radar) {
       else
         return 'nw';
     }
+
     return 'n';
   });
 
@@ -105,26 +106,26 @@ const Radar = function (size, radar) {
   }
 
   function triangle(blip, x, y, order, group) {
-    return group.append('path').attr('d', "M412.201,311.406c0.021,0,0.042,0,0.063,0c0.067,0,0.135,0,0.201,0c4.052,0,6.106-0.051,8.168-0.102c2.053-0.051,4.115-0.102,8.176-0.102h0.103c6.976-0.183,10.227-5.306,6.306-11.53c-3.988-6.121-4.97-5.407-8.598-11.224c-1.631-3.008-3.872-4.577-6.179-4.577c-2.276,0-4.613,1.528-6.48,4.699c-3.578,6.077-3.26,6.014-7.306,11.723C402.598,306.067,405.426,311.406,412.201,311.406")
+    return group.append('path').attr('d', 'M412.201,311.406c0.021,0,0.042,0,0.063,0c0.067,0,0.135,0,0.201,0c4.052,0,6.106-0.051,8.168-0.102c2.053-0.051,4.115-0.102,8.176-0.102h0.103c6.976-0.183,10.227-5.306,6.306-11.53c-3.988-6.121-4.97-5.407-8.598-11.224c-1.631-3.008-3.872-4.577-6.179-4.577c-2.276,0-4.613,1.528-6.48,4.699c-3.578,6.077-3.26,6.014-7.306,11.723C402.598,306.067,405.426,311.406,412.201,311.406')
       .attr('transform', 'scale(' + (blip.width / 34) + ') translate(' + (-404 + x * (34 / blip.width) - 17) + ', ' + (-282 + y * (34 / blip.width) - 17) + ')')
       .attr('class', order);
   }
 
   function triangleLegend(x, y, group) {
-    return group.append('path').attr('d', "M412.201,311.406c0.021,0,0.042,0,0.063,0c0.067,0,0.135,0,0.201,0c4.052,0,6.106-0.051,8.168-0.102c2.053-0.051,4.115-0.102,8.176-0.102h0.103c6.976-0.183,10.227-5.306,6.306-11.53c-3.988-6.121-4.97-5.407-8.598-11.224c-1.631-3.008-3.872-4.577-6.179-4.577c-2.276,0-4.613,1.528-6.48,4.699c-3.578,6.077-3.26,6.014-7.306,11.723C402.598,306.067,405.426,311.406,412.201,311.406")
+    return group.append('path').attr('d', 'M412.201,311.406c0.021,0,0.042,0,0.063,0c0.067,0,0.135,0,0.201,0c4.052,0,6.106-0.051,8.168-0.102c2.053-0.051,4.115-0.102,8.176-0.102h0.103c6.976-0.183,10.227-5.306,6.306-11.53c-3.988-6.121-4.97-5.407-8.598-11.224c-1.631-3.008-3.872-4.577-6.179-4.577c-2.276,0-4.613,1.528-6.48,4.699c-3.578,6.077-3.26,6.014-7.306,11.723C402.598,306.067,405.426,311.406,412.201,311.406')
       .attr('transform', 'scale(' + (22 / 64) + ') translate(' + (-404 + x * (64 / 22) - 17) + ', ' + (-282 + y * (64 / 22) - 17) + ')');
   }
 
   function circle(blip, x, y, order, group) {
     return (group || svg).append('path')
-      .attr('d', "M420.084,282.092c-1.073,0-2.16,0.103-3.243,0.313c-6.912,1.345-13.188,8.587-11.423,16.874c1.732,8.141,8.632,13.711,17.806,13.711c0.025,0,0.052,0,0.074-0.003c0.551-0.025,1.395-0.011,2.225-0.109c4.404-0.534,8.148-2.218,10.069-6.487c1.747-3.886,2.114-7.993,0.913-12.118C434.379,286.944,427.494,282.092,420.084,282.092")
+      .attr('d', 'M420.084,282.092c-1.073,0-2.16,0.103-3.243,0.313c-6.912,1.345-13.188,8.587-11.423,16.874c1.732,8.141,8.632,13.711,17.806,13.711c0.025,0,0.052,0,0.074-0.003c0.551-0.025,1.395-0.011,2.225-0.109c4.404-0.534,8.148-2.218,10.069-6.487c1.747-3.886,2.114-7.993,0.913-12.118C434.379,286.944,427.494,282.092,420.084,282.092')
       .attr('transform', 'scale(' + (blip.width / 34) + ') translate(' + (-404 + x * (34 / blip.width) - 17) + ', ' + (-282 + y * (34 / blip.width) - 17) + ')')
       .attr('class', order);
   }
 
   function circleLegend(x, y, group) {
     return (group || svg).append('path')
-      .attr('d', "M420.084,282.092c-1.073,0-2.16,0.103-3.243,0.313c-6.912,1.345-13.188,8.587-11.423,16.874c1.732,8.141,8.632,13.711,17.806,13.711c0.025,0,0.052,0,0.074-0.003c0.551-0.025,1.395-0.011,2.225-0.109c4.404-0.534,8.148-2.218,10.069-6.487c1.747-3.886,2.114-7.993,0.913-12.118C434.379,286.944,427.494,282.092,420.084,282.092")
+      .attr('d', 'M420.084,282.092c-1.073,0-2.16,0.103-3.243,0.313c-6.912,1.345-13.188,8.587-11.423,16.874c1.732,8.141,8.632,13.711,17.806,13.711c0.025,0,0.052,0,0.074-0.003c0.551-0.025,1.395-0.011,2.225-0.109c4.404-0.534,8.148-2.218,10.069-6.487c1.747-3.886,2.114-7.993,0.913-12.118C434.379,286.944,427.494,282.092,420.084,282.092')
       .attr('transform', 'scale(' + (22 / 64) + ') translate(' + (-404 + x * (64 / 22) - 17) + ', ' + (-282 + y * (64 / 22) - 17) + ')');
   }
 
@@ -281,8 +282,8 @@ const Radar = function (size, radar) {
 
     var clickBlip = function () {
       d3.select('.blip-item-description.expanded').node() !== blipItemDescription.node() &&
-        d3.select('.blip-item-description.expanded').classed("expanded", false);
-      blipItemDescription.classed("expanded", !blipItemDescription.classed("expanded"));
+        d3.select('.blip-item-description.expanded').classed('expanded', false);
+      blipItemDescription.classed('expanded', !blipItemDescription.classed('expanded'));
 
       blipItemDescription.on('click', function () {
         d3.event.stopPropagation();
@@ -317,32 +318,32 @@ const Radar = function (size, radar) {
   function drawLegend(order) {
     removeRadarLegend();
 
-    var triangleKey = "New or moved";
-    var circleKey = "No change";
+    var triangleKey = 'New or moved';
+    var circleKey = 'No change';
 
     var container = d3.select('svg').append('g')
-      .attr('class', 'legend legend'+"-"+order);
+      .attr('class', 'legend legend'+'-'+order);
 
     var x = 10;
     var y = 10;
 
 
-    if(order == "first") {
+    if(order == 'first') {
       x = 4 * size / 5;
       y = 1 * size / 5;
     }
 
-    if(order == "second") {
+    if(order == 'second') {
       x = 1 * size / 5 - 15;
       y = 1 * size / 5 - 20;
     }
 
-    if(order == "third") {
+    if(order == 'third') {
       x = 1 * size / 5 - 15;
       y = 4 * size / 5 + 15;
     }
 
-    if(order == "fourth") {
+    if(order == 'fourth') {
       x = 4 * size / 5;
       y = 4 * size / 5;
     }
@@ -399,23 +400,21 @@ const Radar = function (size, radar) {
       .style('pointer-events', 'auto');
   }
 
-  function plotRadarHeader() {
-    var header = d3.select('body').insert('header', "#radar");
-    header.append('div')
-      .attr('class', 'radar-title')
-      .append('div')
-      .attr('class', 'radar-title__text')
-      .append('h1')
-      .text(document.title)
-      .style('cursor', 'pointer')
-      .on('click', redrawFullRadar);
+  function plotRadarHeader(holder) {
+    var header = holder.insert('div', '.radar-body');
 
-    header.select('.radar-title')
-      .append('div')
-      .attr('class', 'radar-title__logo')
-      .html('<a href="https://www.thoughtworks.com"> <img src="/images/logo.png" /> </a>');
+    header.attr('class', 'radar-header');
 
     return header;
+  }
+
+  function plotRadarFooter(holder) {
+      holder
+          .append('div')
+          .attr('class', 'radar-footer')
+          .append('p')
+          .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. ');
+      return holder;
   }
 
   function plotQuadrantButtons(quadrants, header) {
@@ -445,19 +444,6 @@ const Radar = function (size, radar) {
       .on('click', window.print.bind(window));
   }
 
-  function plotRadarFooter() {
-    d3.select('body')
-      .insert('div', '#radar-plot + *')
-      .attr('id', 'footer')
-      .append('div')
-      .attr('class', 'footer-content')
-      .append('p')
-      .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. '
-      + 'By using this service you agree to <a href="https://www.thoughtworks.com/radar/tos">ThoughtWorks\' terms of use</a>. '
-      + 'You also agree to our <a href="https://www.thoughtworks.com/privacy-policy">privacy policy</a>, which describes how we will gather, use and protect any personal data contained in your public Google Sheet. '
-      + 'This software is <a href="https://github.com/thoughtworks/build-your-own-radar">open source</a> and available for download and self-hosting.');
-  }
-
   function mouseoverQuadrant(order) {
     d3.select('.quadrant-group-' + order).style('opacity', 1);
     d3.selectAll('.quadrant-group:not(.quadrant-group-' + order + ')').style('opacity', 0.3);
@@ -469,7 +455,7 @@ const Radar = function (size, radar) {
 
   function selectQuadrant(order, startAngle) {
     d3.selectAll('.home-link').classed('selected', false);
-    createHomeLink(d3.select('header'));
+    createHomeLink(d3.select('.radar-header'));
 
     d3.selectAll('.button').classed('selected', false).classed('full-view', false);
     d3.selectAll('.button.' + order).classed('selected', true);
@@ -524,8 +510,10 @@ const Radar = function (size, radar) {
     }
   }
 
-  self.init = function () {
-    radarElement = d3.select('body').append('div').attr('id', 'radar');
+  self.init = function (holder) {
+    self.holder = holder;
+
+    radarElement = holder.append('div').attr('class', 'radar-body');
     return self;
   };
 
@@ -534,13 +522,13 @@ const Radar = function (size, radar) {
 
     rings = radar.rings();
     quadrants = radar.quadrants();
-    var header = plotRadarHeader();
+    var header = plotRadarHeader(self.holder);
 
     plotQuadrantButtons(quadrants, header);
 
     radarElement.style('height', size + 14 + 'px');
-    svg = radarElement.append("svg").call(tip);
-    svg.attr('id', 'radar-plot').attr('width', size).attr('height', size + 14);
+    svg = radarElement.append('svg').call(tip);
+    svg.attr('class', 'radar-plot').attr('width', size).attr('height', size + 14);
 
     _.each(quadrants, function (quadrant) {
       var quadrantGroup = plotQuadrant(rings, quadrant);
@@ -549,7 +537,7 @@ const Radar = function (size, radar) {
       plotBlips(quadrantGroup, rings, quadrant);
     });
 
-    plotRadarFooter();
+    plotRadarFooter(self.holder);
   };
 
   return self;

@@ -1,6 +1,7 @@
 .d3-tip {
   white-space:nowrap;
   line-height:1;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size:12px;
   display:none;
   padding:12px;
@@ -16,7 +17,7 @@
   .d3-tip{ display:block }
 }
 
-.d3-tip:after{ 
+.d3-tip:after{
   box-sizing:border-box;
   display:none;
   font-size:10px;
