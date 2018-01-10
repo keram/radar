@@ -79,6 +79,14 @@ const DocumentPrototype = {
     }
 }
 
+const documentUrl = function(str, location) {
+    if (/^http(s)?\:\/\//.test(str)) {
+        return str;
+    } else {
+        return location.origin.concat('/', str);
+    }
+}
+
 const CSVDocument = function (options) {
     var self = {
         options: options,
@@ -86,7 +94,7 @@ const CSVDocument = function (options) {
     };
 
     self.build = function () {
-        d3.csv(this.options.url, createBlips);
+        d3.csv(documentUrl(this.options.url, window.location), createBlips);
     }
 
     var ringNames = function(blips) {
