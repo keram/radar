@@ -1,5 +1,4 @@
-require('./common');
-require('./images/radar_legend.png');
+require('./stylesheets/base.scss');
 
 const GoogleSheetInput = require('./util/factory');
 
