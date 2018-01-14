@@ -1,20 +1,17 @@
 .radar-header {
-  width: 100%;
   line-height: 60px;
-  text-align: center;
-  margin-bottom: 15px;
-
-  .print-radar {
-    margin-left: 100px;
-  }
 
   .home-link {
     color: $pink;
     cursor: pointer;
-    display: inline-block;
-    font-size: $baseFont;
     text-align: left;
-    width: 80%;
+    display: none;
+    white-space: nowrap;
+    float: left;
+  }
+
+  .expanded .home-link {
+      display: inline;
   }
 
   .button {
@@ -56,6 +53,10 @@
         color: white;
         background-color: $violet;
       }
+    }
+
+    &:last-child {
+      margin-right: 0px;
     }
 
     &.full-view {

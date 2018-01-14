@@ -1,0 +1,170 @@
+
+.radar-plot {
+  margin: 0 auto;
+  transition: all 1s ease;
+  left: 0;
+  right: 0;
+
+  .legend {
+    visibility: hidden;
+    transition: visibility 1s ease 1s;
+    color: $black;
+  }
+
+  .blip-link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .quadrant-group {
+    cursor: pointer;
+  }
+
+  path {
+    &.ring-arc-3 {
+      stroke: none;
+      fill: $grey-light;
+    }
+    &.ring-arc-2 {
+      stroke: none;
+      fill: $grey;
+    }
+    &.ring-arc-1 {
+      stroke: none;
+      fill: $grey-dark;
+    }
+    &.ring-arc-0 {
+      stroke: none;
+      fill: $grey-darkest;
+    }
+  }
+
+  circle, polygon, path {
+    &.first {
+      fill: $green;
+      stroke: none;
+    }
+    &.second {
+      fill: $blue;
+      stroke: none;
+    }
+    &.third {
+      fill: $orange;
+      stroke: none;
+    }
+    &.fourth {
+      fill: $violet;
+      stroke: none;
+    }
+  }
+
+  line {
+    stroke: $white;
+  }
+
+  text {
+    &.blip-text {
+      font-size: 9px;
+      font-style: italic;
+      fill: $white;
+    }
+
+    &.line-text {
+      font-weight: bold;
+      text-transform: uppercase;
+      fill: $black;
+      font-size: 11px;
+    }
+  }
+}
+
+.quadrant-table__name {
+  text-transform: capitalize;
+}
+
+.quadrant-table {
+  &.first .quadrant-table__name {
+    color: $green;
+  }
+
+  &.second .quadrant-table__name {
+    color: $blue;
+  }
+
+  &.third .quadrant-table__name {
+    color: $orange;
+  }
+
+  &.fourth .quadrant-table__name {
+    color: $violet;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: $baseFont;
+    margin: 0;
+    font-weight: bold;
+  }
+}
+
+@media screen {
+  .quadrant-table {
+    display: none;
+    text-align: left;
+
+    h3 {
+      margin: 0;
+    }
+
+    &.selected {
+      display: block;
+    }
+
+    ul {
+      padding: 0;
+      margin-left: 0;
+
+      li {
+        list-style-type: none;
+        padding-left: 0;
+
+        .blip-list-item {
+          padding: 2px 5px;
+          border-radius: 2px;
+          cursor: pointer;
+          font-size: $baseFont;
+          font-weight: 400;
+
+          &.highlight {
+            color: $white;
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+        }
+
+        .blip-item-description {
+          max-height: 0;
+          overflow: hidden;
+          width: 300px;
+
+          p {
+            margin: 0;
+            border-top: 1px solid rgb(119, 119, 119);
+            border-bottom: 1px solid rgb(119, 119, 119);
+            padding: 20px;
+            color: $grey-text;
+            font-weight: 100;
+            font-size: 14px;
+          }
+
+          transition: max-height 0.2s ease;
+
+          &.expanded {
+            transition: max-height 0.5s ease 0.2s;
+            max-height: 1000px;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,81 @@
+
+@media screen and (max-width: 415px) {
+  .radar-plot {
+    display: none;
+  }
+
+  .radar-header {
+    .button {
+      width: 100%;
+    }
+  }
+
+  .radar-body {
+    .quadrant-table {
+      position: relative;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .radar-header {
+    .button {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 620px) {
+  .radar-plot {
+    display: none;
+  }
+
+  .radar-header {
+    .button {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (min-width: 620px) and (max-width: 900px) {
+  .quadrant-table__name {
+    display: block;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .radar-header {
+    text-align: center;
+  }
+
+  .quadrant-table {
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .quadrant-table {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+}
+
+@media screen and (min-width: 1220px) {
+
+  .radar-header, .radar-body, .radar-footer {
+    text-align: center;
+  }
+
+  .quadrant-table {
+    left: 0;
+  }
+
+  .radar-body {
+    text-align: center;
+  }
+}

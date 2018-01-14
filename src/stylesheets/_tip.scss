@@ -1,7 +1,7 @@
 .d3-tip {
   white-space:nowrap;
   line-height:1;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $baseFamily;
   font-size:12px;
   display:none;
   padding:12px;

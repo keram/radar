@@ -1,9 +1,10 @@
 .radar-footer {
   margin: 0 auto;
+  line-height: 60px;
 
   p {
-    font-size: $baseFont - 3;
-    font-weight: $baseWeight;
-    text-align: left;
+    font-size: $baseFont - 2;
+    padding: 0;
+    margin: 0;
   }
 }

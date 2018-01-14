@@ -58,9 +58,12 @@ const buildRadar = function (quadrants) {
 }
 
 const plotRadar = function (holder, radar) {
-    var headerHeight = 180;
-    var minSize = 620;
+    var headerHeight = 150;
+    var minSize = 600;
+    var holderWidth = holder.node().getBoundingClientRect().width - 40;
     var size = (window.innerHeight - headerHeight) < minSize ? minSize : window.innerHeight - headerHeight;
+
+    size = Math.min(size, Math.max(holderWidth, minSize));
     holder.selectAll('.loading').remove();
 
     new GraphingRadar(size, radar).init(holder).plot();
